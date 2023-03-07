@@ -1,0 +1,10 @@
+ion-card-header.ios {
+  display: flex;
+  flex-flow: column-reverse;
+}
+
+ion-thumbnail {
+  --size: 140px;
+  --border-radius: 14px;
+  background-color: rgb(255, 255, 255);
+}

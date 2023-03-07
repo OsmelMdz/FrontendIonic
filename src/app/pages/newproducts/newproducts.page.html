@@ -1,0 +1,68 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons color="primary" slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>New Product</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button color="primary" defaultHref="products"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+  <ion-card color="dark">
+      <ion-list color="dark">
+        <form [formGroup]="form">
+          <ion-item fill="solid">
+            <ion-label position="floating">Nombre: </ion-label>
+            <ion-input formControlName="name" type="text" placeholder="Gansito"></ion-input>
+          </ion-item>
+          <ion-item fill="solid">
+            <ion-label position="floating">Descripcion: </ion-label>
+            <ion-input formControlName="descripcion" type="text" placeholder="Sabor Chocolate"></ion-input>
+
+          </ion-item>
+          <ion-row>
+            <ion-col>
+              <ion-item fill="solid">
+                <ion-label position="floating">Precio: </ion-label>
+                <ion-input formControlName="precio" type="number" placeholder="15.00"></ion-input>
+
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item fill="solid">
+                <ion-label position="floating">Categoria: </ion-label>
+                <ion-input formControlName="categoria" type="textarea" placeholder="Golosina"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-item fill="solid">
+            <ion-label position="floating">URLimg: </ion-label>
+            <ion-input formControlName="urlimg" type="url" placeholder="https://www.heb.com.mx/media/catalog/product/cache/9f5ec31302878493d9ed0ac40a398e12/4/3/4314_image.jpg"></ion-input>
+          </ion-item>
+          <ion-row>
+            <ion-col>
+              <ion-item fill="solid">
+                <ion-label position="floating">Stock: </ion-label>
+                <ion-input formControlName="stock" type="number" placeholder="50"></ion-input>
+              </ion-item>
+            </ion-col>
+            <ion-col>
+              <ion-item fill="solid">
+                <ion-label position="floating">Marca: </ion-label>
+                <ion-input formControlName="marca" type="text" placeholder="Marinela"></ion-input>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          <ion-item fill="solid">
+            <ion-label position="floating">Estado: </ion-label>
+            <ion-input formControlName="estado" type="number" placeholder="1/0"></ion-input>
+          </ion-item>
+          <br>
+          <ion-button color="success" expand="block" (click)="guardarProducto()" [disabled]="form.invalid">Guardar</ion-button>
+        </form>
+      </ion-list>
+  </ion-card>
+</ion-content>
